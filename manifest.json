@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "AmEng to AusEng Spelling Converter",
+  "version": "1.0",
+  "description": "Converts American English spelling to Australian/British English on webpages.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "intro.html",
+    "default_icon": {
+      "16": "hello_extensions.png",
+      "48": "hello_extensions.png",
+      "128": "hello_extensions.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
