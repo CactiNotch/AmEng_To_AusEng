@@ -1,0 +1,1 @@
+<span>This manifest will work in Firefox but will not work in Chrome if Chrome requires Manifest V3. If you need compatibility with both browsers, you may need to maintain separate manifest files or use a build tool to generate brwoser-specific versions.</span>
